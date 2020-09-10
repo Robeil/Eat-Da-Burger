@@ -8,4 +8,3 @@ CREATE TABLE burgers
 	devoured BOOLEAN DEFAULT false,   -- false or true got ask
 	PRIMARY KEY (id)
 );
- USE burgers;
