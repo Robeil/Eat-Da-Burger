@@ -1,3 +1,5 @@
-INSERT INTO burgers (burger_name) VALUES ('Chicken burger');
-INSERT INTO burgers (burger_name) VALUES ('Beef burger');
-INSERT INTO burgers (burger_name) VALUES ('Cheese burger');
+USE burgers_db;
+
+INSERT INTO burgers (burger_name, devoured) VALUES ('Chicken burger', FALSE);
+INSERT INTO burgers (burger_name, devoured) VALUES ('Beef burger',FALSE);
+INSERT INTO burgers (burger_name, devoured) VALUES ('Cheese burger',FALSE);
