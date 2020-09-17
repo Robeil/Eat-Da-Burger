@@ -1,7 +1,7 @@
 const { updateBurger } = require("../../../config/orm");
 
 $(function() {
-    $(".addBurger").on("submit", function(event) {
+    $("#addBurger").on("submit", function(event) {
         event.preventDefault();
 
         var newBurger = {

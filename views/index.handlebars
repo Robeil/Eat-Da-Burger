@@ -1,5 +1,5 @@
 <div class="container">
-    <div>
+    <div class="">
         <img src="http://image.flaticon.com/icons/png/512/189/189127.png" class="mx-auto d-block" alt="Burger img"
             width="200" height="200">
     </div>
@@ -9,24 +9,28 @@
     <div>
         <section>
             <div class="text-center">
+                 <div >
                 <form>
                     <textarea type="text" name="burger" id="burger"></textarea>
                     <br>
-                    <button type="submit">Enter Burger!</button>
+                    <button id="burger" type="submit" class="btn btn-info" >Enter Burger!</button>
                 </form>
+                   </div>
             </div>
         </section>
     </div>
     <div>
         <aside>
+            <div class="">
             <h2>Burgers be Eat:</h2>
+            </div>
             <dl>
                 {{#each burgers}}
                 <dt>
                     <p>
                         {{this.id}} {{this.burger_name}}
                     </p>
-                    <button data-burgerId="{{this.id}}" class="">Devour Please!</button>
+                    <button data-burgerId="{{this.id}}" class="btn btn-info">Devour Please!</button>
                 </dt>
                 {{/each}}
             </dl>
@@ -35,12 +39,14 @@
 
     <div>
         <aside>
+            <div>
             <h2>Devoured Burgers</h2>
+            </div>
             <dl>
                 {{#each burgers}}
                 {{#if devoured}}
-                <dt>
-                    <p>
+                <dt class="">
+                    <p class="float-left">
                         {{this.id}}. {{this.burger_name}}
                     </p>
                 </dt>
