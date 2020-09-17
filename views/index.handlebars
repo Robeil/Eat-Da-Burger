@@ -1,55 +1,52 @@
-<div>
+<div class="container">
     <div>
-        <div>
-            <h1>Eat Da Burger</h1>
-        </div>
-      
+        <img src="http://image.flaticon.com/icons/png/512/189/189127.png" class="mx-auto d-block" alt="Burger img"
+            width="200" height="200">
+    </div>
+    <div class="text-center">
+        <h1>Eat-Da-Burger</h1>
     </div>
     <div>
-        <div>
-            <aside>
-                <h2>Burgers be Eat:</h2>
-                <dl>
-                    {{#each burgers}}
-                    {{#unless devoured}}
-                    <dt>
-                        <p>
-                            {{this.id}}. {{this.burger_name}}
-                        </p>
-                        <button data-burgerId="{{this.id}}" class="">Devour Please!</button> <!--id-->
-                    </dt>
-                    {{/unless}}
-                    {{/each}}
-                </dl>
-            </aside>
-        </div>
-
-        <div>
-            <section>
-                <img src="/assets/img/char_broiled-cheeseburger.svg" alt="Burger-Image.">
-                <h2>Add a Burger</h2>
+        <section>
+            <div class="text-center">
                 <form>
                     <textarea type="text" name="burger" id="burger"></textarea>
+                    <br>
                     <button type="submit">Enter Burger!</button>
                 </form>
-            </section>
-        </div>
+            </div>
+        </section>
+    </div>
+    <div>
+        <aside>
+            <h2>Burgers be Eat:</h2>
+            <dl>
+                {{#each burgers}}
+                <dt>
+                    <p>
+                        {{this.id}} {{this.burger_name}}
+                    </p>
+                    <button data-burgerId="{{this.id}}" class="">Devour Please!</button>
+                </dt>
+                {{/each}}
+            </dl>
+        </aside>
+    </div>
 
-        <div>
-            <aside>
-                <h2>Devoured Burgers</h2>
-                <dl>
-                    {{#each burgers}}
-                    {{#if devoured}}
-                    <dt>
-                        <p>
-                            {{this.id}}. {{this.burger_name}}
-                        </p>
-                    </dt>
-                    {{/if}}
-                    {{/each}}
-                </dl>
-            </aside>
-        </div>
+    <div>
+        <aside>
+            <h2>Devoured Burgers</h2>
+            <dl>
+                {{#each burgers}}
+                {{#if devoured}}
+                <dt>
+                    <p>
+                        {{this.id}}. {{this.burger_name}}
+                    </p>
+                </dt>
+                {{/if}}
+                {{/each}}
+            </dl>
+        </aside>
     </div>
 </div>

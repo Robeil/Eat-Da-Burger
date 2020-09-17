@@ -17,7 +17,7 @@ var orm = {
         var queryString = 'SELECT * FROM ' + tableName + ';';
         connection.query(queryString, function (err, result) {
             if (err) throw err;
-            console.log(result);
+          cb(result);
         })
     },
     // post method
