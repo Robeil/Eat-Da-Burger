@@ -13,18 +13,18 @@ router.get('/', function (req, res) {
       burgers: data
     };
     console.log(obj1);
-    res.render("index",{ burgers: obj1 });
+    res.render("index", obj1 );
 
   });
 });
 
 //post router
-router.post('/burgers', function (req, res) {
-console.log('posting here')
+router.post('/api/burgers', function (req, res) {
+console.log('posting here:', req.body)
   burger.addBurger(
 
     ['burger_name, devoured'],
-    [req.body.name, devoured],
+    [req.body.name, req.body.devoured],
 
     function (result) {
       res.json({ id: result.id });
@@ -32,12 +32,12 @@ console.log('posting here')
 });
 
 //put router
-router.put('/api/burgers/id', function (req, res) {
+router.put('/api/burgers/:id', function (req, res) {
 
   var condition = 'id = ' + req.params.id;
   console.log('devoured burger: ', condition);
 
-  burger.update({ devoured }, condition, function (result) {
+  burger.update( {devoured:req.body.devoured } , condition, function (result) {
 
     if (result.changeRows == 0) {
       return res.status(404).end();

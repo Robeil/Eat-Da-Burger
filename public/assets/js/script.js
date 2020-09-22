@@ -1,12 +1,10 @@
-const { updateBurger } = require("../../../config/orm");
-
 $(function() {
-    $("#addBurger").on("submit", function(event) {
+    $(".addBurger").on("submit", function(event) {
         event.preventDefault();
 
         var newBurger = {
-            name: $("#burger").val().trim(),
-            devoured: false
+            name: $("#burgers").val().trim(),
+            devoured: 0
         };
 
         // post request
@@ -18,18 +16,18 @@ $(function() {
             location.reload();
         })
     });
-
-    $(".devour").on("click", function(event) {
-        var id = $(this).data("burgerId");
-
-        var updateBurger = {
-            devoured: true
+//putt
+    $(".devourMe").on("click", function(event) {
+        var id = $(this).data("burgerid");
+console.log("clicked",id)
+        var burgerUpdate = {
+            devoured: 1
         };
 
         //put request
         $.ajax("/api/burgers/" + id, {
             type: "PUT",
-            data: updateBurger
+            data:burgerUpdate
         }).then(function() {
             console.log(`Burger ${id} devoured.`);
             location.reload();

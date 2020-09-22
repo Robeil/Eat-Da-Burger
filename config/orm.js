@@ -22,7 +22,7 @@ var orm = {
     },
     // post method
     insertBurger: function (table, cols, vals, cb) {
-        var queryString = 'SELECT INTO ' + table;
+        var queryString = 'INSERT INTO ' + table;
         queryString += " (";
         queryString += cols.toString();
         queryString += ") ";
