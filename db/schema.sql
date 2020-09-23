@@ -5,6 +5,6 @@ CREATE TABLE burgers
 (
 	id int NOT NULL AUTO_INCREMENT,
 	burger_name VARCHAR(250) NOT NULL,
-	devoured BOOLEAN NOT NULL,   -- false or true got ask
+	devoured BOOLEAN NOT NULL,
 	PRIMARY KEY (id)
 );

@@ -8,7 +8,7 @@
     </div>
     <div class="row">
         <div class="column">
-        
+
             <br>
             <aside>
                 <h3>Burger to eat</h3>
@@ -19,14 +19,14 @@
                         <p class="float-left">
                             {{this.id}} {{this.burger_name}}
                         </p>
-                        <button data-burgerid="{{this.id}}" class="devourMe button-small float-right">Devour!</button>
+                        <button class="btn btn-secondary" data-burgerid="{{this.id}}"
+                            class="devourMe button-small float-right">Devour</button>
                     </dt>
                     {{/unless}}
                     {{/each}}
                 </dl>
             </aside>
         </div>
-
 
         <div class="column">
             <section>
@@ -35,13 +35,12 @@
                 <!--addburger here-->
                 <h2>Add a Burger</h2>
                 <form class="addBurger">
-                    <textarea type="text" name="burger" id="burgers"></textarea>
-                    <button type="submit">Enter Burger!</button>
+                    <input type="text" name="burger" id="burgers"></input>
+                    <button class="btn btn-secondary" type="submit">Enter Burger</button>
                 </form>
             </section>
         </div>
-
-
+        
         <div class="column">
             <aside>
                 <h2>Devoured burger</h2>
